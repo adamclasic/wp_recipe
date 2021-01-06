@@ -60,7 +60,7 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
       echo wp_kses_post(
       sprintf(
         '<div class="notice notice-error"><p>%s</p></div>',
-        __( '"{{plugin_name}}" requires PHP 5.6 or newer.', PN_TEXTDOMAIN )
+        __( 'Recipe requires PHP 5.6 or newer.', PN_TEXTDOMAIN )
       )
       );
     }
@@ -69,3 +69,12 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
   // Return early to prevent loading the plugin.
   return;
 }
+
+//setup
+
+//includes
+include( 'inc/init.php' );
+//hooks
+add_action( 'init', 'ud_register_posttype' );
+
+//shortcodes
