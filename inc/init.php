@@ -4,7 +4,7 @@
  *
  * @see get_post_type_labels() for label keys.
  */
-function ud_register_posttype() {
+function r_register_posttype() {
     $labels = array(
         'name'                  => _x( 'Recipes', 'Post type general name', 'recipe' ),
         'singular_name'         => _x( 'Recipe', 'Post type singular name', 'recipe' ),

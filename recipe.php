@@ -4,7 +4,7 @@
  * @package   recipe
  * @author    {{Adamclasic}} <{{author_email}}>
  * @copyright {{author_copyright}}
- * @license   {{author_license}}
+ * @license   {{MIT}}
  * @link      {{author_url}}
  *
  * Plugin Name:     recipe
@@ -14,7 +14,7 @@
  * Author:          Adamclasic
  * Author URI:      author_url
  * Text Domain:     recipe
- * License:         author_license
+ * License:         MIT
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:     /languages
  * Requires PHP:    7.0
@@ -74,7 +74,9 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 
 //includes
 include( 'inc/init.php' );
+include( 'inc/process/r_save_post.php' );
 //hooks
-add_action( 'init', 'ud_register_posttype' );
+add_action( 'init', 'r_register_posttype' );
+add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 
 //shortcodes
