@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Recipe ===
 Contributors: (this should be a list of wordpress.org userid's)
 Donate link: http://example.com/
 Tags: comments, spam (maximum 12)
@@ -13,7 +13,7 @@ Here is a short description of the plugin.  This should be no more than 150 char
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+It adds a rating to recipe post type without using Advanced Custom Fields plugin.
 
 Add your new plugin at
 [WordPress Plugin Boilerplate Powered
