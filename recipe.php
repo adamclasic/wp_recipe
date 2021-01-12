@@ -76,7 +76,9 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 include( 'inc/init.php' );
 include( 'inc/process/r_save_post.php' );
 include( 'inc/process/filter_content.php' );
+include( 'inc/activation.php' );
 //hooks
+register_activation_hook(__FILE__, 'r_activate');
 add_action( 'init', 'r_register_posttype' );
 add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 add_filter('the_content', 'filter_content');
