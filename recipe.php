@@ -73,6 +73,8 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 //setup
 
 //includes
+include( 'inc/admin/init.php' );
+
 include( 'inc/init.php' );
 include( 'inc/process/r_save_post.php' );
 include( 'inc/process/filter_content.php' );
