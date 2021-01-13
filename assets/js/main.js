@@ -7,8 +7,8 @@ ratingForm.addEventListener("submit", function(event){
   event.preventDefault()
   
   // ratingVal
-  // $.post(  )
-  console.log('rrrrr_recipe_obj');
-  console.log(recipe_obj);
+  console.log(recipe_obj.ajax_url);
+  $.post(recipe_obj.ajax_url, {'action': 'r_rating_form', 'ratingVal': 'USA'}, (data) => {console.log(data)})
+  // console.log();
 });
 })(jQuery);
