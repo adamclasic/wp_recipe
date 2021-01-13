@@ -1,11 +1,24 @@
 <?php
 function r_enqueue()
 {
-  wp_register_script('r_rateit_script' ,PN_PLUGIN_ROOT . './assets/rateit/jquery.rateit.min.js', ['jquery'], false, true);
-  wp_register_style('r_rateit_style' ,PN_PLUGIN_ROOT . './assets/rateit/rateit.css');
-  wp_register_script('r_main' ,PN_PLUGIN_ROOT . './assets/js/main.js', ['jquery'], false, true);
+  wp_register_style( 'r_rateit', plugins_url( '/assets/rateit/rateit.css', RECIPE_PLUGIN_URL ) );
+  wp_enqueue_style( 'r_rateit' );
 
-  wp_enqueue_script('r_rateit_script');
-  wp_enqueue_style('r_rateit_style');
-  wp_enqueue_script('r_main');
+  wp_register_script( 
+      'r_rateit', 
+      plugins_url( '/assets/rateit/jquery.rateit.min.js', RECIPE_PLUGIN_URL ), 
+      ['jquery'], 
+      '1.0.0', 
+      true 
+  );
+  wp_register_script( 
+      'r_main', plugins_url( '/assets/js/main.js', RECIPE_PLUGIN_URL ), ['jquery'], '1.0.0', true 
+  );
+
+  wp_localize_script( 'r_main', 'recipe_obj', [
+      'ajax_url'      =>  admin_url( 'admin-ajax.php' )
+  ]);
+  
+  wp_enqueue_script( 'r_rateit' );
+  wp_enqueue_script( 'r_main' );
 }
