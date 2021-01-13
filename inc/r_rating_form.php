@@ -1,6 +1,6 @@
 <?php
-function r_rating_for()
+function r_rating_form()
 {
-  print_r('$_POST');
+  print_r($_POST);
   wp_die();
 }
