@@ -8,9 +8,9 @@
     console.log( postId );
     let inputVal = document.querySelector('#rating-number').value;
     let ratingVal = {
+                    'action': 'r_rating_form',
                     'rVal': inputVal,
                     'postId': postId,
-                    'action': 'r_rating_form'
                   };
     // ratingVal
     $.post(recipe_obj.ajax_url, ratingVal, (data) => {console.log(data)});
