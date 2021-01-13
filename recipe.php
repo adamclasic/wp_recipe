@@ -31,7 +31,7 @@ if ( !function_exists( 'add_action' ) ) {
   exit;
 }
 
-
+define( 'RECIPE_PLUGIN_URL', __FILE__ );
 define( 'PN_VERSION', '0.1' );
 define( 'PN_TEXTDOMAIN', 'recipe' );
 define( 'PN_NAME', 'recipe' );
@@ -80,7 +80,7 @@ include( 'inc/activation.php' );
 include( 'inc/enqueue.php' );
 //hooks
 register_activation_hook(__FILE__, 'r_activate');
-add_action( 'wp_enqueue_scripts', 'r_enqueue' );
+add_action( 'wp_enqueue_scripts', 'r_enqueue', 100);
 add_action( 'init', 'r_register_posttype' );
 add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 add_filter('the_content', 'filter_content');
