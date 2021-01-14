@@ -82,6 +82,7 @@ include( 'inc/activation.php' );
 include( 'inc/enqueue.php' );
 include( 'inc/r_rating_form.php' );
 include( 'inc/r_block_enqueue.php' );
+include( dirname(RECIPE_PLUGIN_URL) . '\inc\widgets\recipe_of_day.php' );
 include( 'inc/r_register_widgets.php' );
 //hooks
 
