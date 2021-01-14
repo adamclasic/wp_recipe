@@ -78,6 +78,7 @@ include( 'inc/admin/init.php' );
 include( 'inc/init.php' );
 include( 'inc/process/r_save_post.php' );
 include( 'inc/process/filter_content.php' );
+include( 'inc/desactivation.php' );
 include( 'inc/activation.php' );
 include( 'inc/enqueue.php' );
 include( 'inc/r_rating_form.php' );
@@ -87,6 +88,7 @@ include( 'inc/r_register_widgets.php' );
 //hooks
 
 register_activation_hook(__FILE__, 'r_activate');
+register_deactivation_hook( __FILE__, 'my_deactivation' );
 add_action( 'wp_enqueue_scripts', 'r_enqueue', 100);
 add_action( 'gutenberg enqueue_block_assets', 'r_block_enqueue', 100);
 add_action( 'init', 'r_register_posttype' );
