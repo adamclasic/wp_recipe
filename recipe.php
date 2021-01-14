@@ -97,3 +97,8 @@ add_action( 'widgets_init ', 'r_register_widgets');
 
 add_filter('the_content', 'filter_content');
 //shortcodes
+
+add_shortcode('happy_and_short', function ()
+{
+  return 'hello world';
+});
