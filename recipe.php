@@ -85,6 +85,8 @@ include( 'inc/r_rating_form.php' );
 include( 'inc/r_block_enqueue.php' );
 include( dirname(RECIPE_PLUGIN_URL) . '\inc\widgets\recipe_of_day.php' );
 include( 'inc/r_register_widgets.php' );
+// include( 'inc/utilities/get_random_post_id.php' );
+// include( 'inc/r_my_daily_event.php' );
 //hooks
 
 register_activation_hook(__FILE__, 'r_activate');
@@ -95,12 +97,40 @@ add_action( 'init', 'r_register_posttype' );
 add_action( 'wp_ajax_r_rating_form', 'r_rating_form' );
 add_action( 'wp_ajax_nopriv_r_rating_form', 'r_rating_form' );
 add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
-add_action( 'widgets_init ', 'r_register_widgets');
+// add_action( 'widgets_init ', 'r_register_widgets');
+// add_action( 'my_daily_event ', 'r_my_daily_event');
 
 add_filter('the_content', 'filter_content');
 //shortcodes
+function mnrf()
+{
+  ob_start();
+  wp_editor('', 'recipecontenteditor');
+  $tiny_emc = ob_get_clean();
+  return $tiny_emc;
+}
+
 
 add_shortcode('happy_and_short', function ()
 {
-  return 'hello world';
+  
+  $Vdata = file_get_contents("creatortemplate.php", true);
+  // print_r($tiny_emc);
+  // print_r($Vdata);
+  str_replace('1IN18', mnrf(), $Vdata);
+  return $Vdata;
+  
 });
+
+// started the login form!!
+
+// add_shortcode('sign_form', function ()
+// {
+  
+//   $show_data = file_get_contents("creatortemplate.php", true);
+//   // print_r($tiny_emc);
+//   // print_r($Vdata);
+//   str_replace('1IN18', mnrf(), $Vdata);
+//   return ;
+
+// });
