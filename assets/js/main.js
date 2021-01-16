@@ -20,10 +20,10 @@
   
   
   console.log('hey');
-  console.log($('#login-form'));
+  console.log($('#register-form'));
   console.log('hey');
 
-  $('document').on('submit', '#register-form', (e) => {
+  $(document).on('submit', '#register-form', (e) => {
     e.preventDefault();
     console.log('fuckrun');
     var form                            =   {
