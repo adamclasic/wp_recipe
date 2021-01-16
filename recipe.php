@@ -117,20 +117,19 @@ add_shortcode('happy_and_short', function ()
   $Vdata = file_get_contents("creatortemplate.php", true);
   // print_r($tiny_emc);
   // print_r($Vdata);
-  str_replace('1IN18', mnrf(), $Vdata);
+  $Vdata = str_replace('1IN18', mnrf(), $Vdata);
   return $Vdata;
   
 });
 
 // started the login form!!
 
-// add_shortcode('sign_form', function ()
-// {
+add_shortcode('login_form', function ()
+{
   
-//   $show_data = file_get_contents("creatortemplate.php", true);
-//   // print_r($tiny_emc);
-//   // print_r($Vdata);
-//   str_replace('1IN18', mnrf(), $Vdata);
-//   return ;
-
-// });
+  $form_data = file_get_contents("login_form.php", true);
+  // print_r($tiny_emc);
+  // print_r($Vdata);
+  $form_data = str_replace('STR_NONCE', '<P>HI HI HI</P>', $form_data);
+  return $form_data;
+});
