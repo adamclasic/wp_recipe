@@ -1,9 +1,9 @@
 <div class="col_one_third nobottommargin">
-STR_NONCE
   <div class="well well-lg nobottommargin">
     <div id="login-status"></div>
-
+    
     <form id="login-form" class="nobottommargin">
+      STR_NONCE
 
       <h3>Login to your Account</h3>
 
@@ -18,7 +18,7 @@ STR_NONCE
       </div>
 
       <div class="col_full nobottommargin">
-        <button class="button button-3d nomargin" id="login-form-submit">Login</button>
+        <input type="submit" class="button button-3d nomargin" id="login-form-submit">Login</input>
       </div>
 
     </form>
@@ -73,9 +73,9 @@ STR_NONCE
     <div class="clear"></div>
 
     <div class="col_full nobottommargin">
-      <button class="button button-3d button-black nomargin">
+    <input type="submit" class="button button-3d button-black nomargin">
         Register Now
-      </button>
+    </input>
     </div>
 
   </form>
