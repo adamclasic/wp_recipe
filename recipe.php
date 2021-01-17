@@ -98,6 +98,7 @@ add_action( 'init', 'r_register_posttype' );
 add_action( 'wp_ajax_r_rating_form', 'r_rating_form' );
 add_action( 'wp_ajax_nopriv_r_rating_form', 'r_rating_form' );
 add_action( 'wp_ajax_nopriv_recipe_create_account', 'recipe_create_account' );
+add_action( 'wp_ajax_recipe_create_account', 'recipe_create_account' ); //only for development. this line should be deleted in production.
 add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 // add_action( 'widgets_init ', 'r_register_widgets');
 // add_action( 'my_daily_event ', 'r_my_daily_event');

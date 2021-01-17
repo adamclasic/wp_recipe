@@ -25,7 +25,6 @@
 
   $(document).on('submit', '#register-form', (e) => {
     e.preventDefault();
-    console.log('fuckrun');
     var form                            =   {
       _wpnonce:                           $('#_wpnonce').val(),
       action:                             "recipe_create_account",
@@ -34,7 +33,10 @@
       email:                              $("#register-form-email").val(),
       pass:                               $("#register-form-password").val(),
       confirm_pass:                       $("#register-form-repassword").val()
-  };
-  $.post(recipe_obj.ajax_url, form, (data) => {console.log(data)});
+    };
+    $.post(recipe_obj.ajax_url, form, (data) => {
+      window.location.href = "/";
+    });
+    console.log('fuckrun');
   });
 })(jQuery);
