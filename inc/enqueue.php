@@ -16,7 +16,8 @@ function r_enqueue()
   );
 
   wp_localize_script( 'r_main', 'recipe_obj', [
-      'ajax_url'      =>  admin_url( 'admin-ajax.php' )
+      'ajax_url'      =>  admin_url( 'admin-ajax.php' ),
+      'home_url'      =>  home_url('/')
   ]);
 
   wp_enqueue_script( 'r_rateit' );

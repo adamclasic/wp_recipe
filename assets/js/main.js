@@ -36,6 +36,7 @@
     };
     $.post(recipe_obj.ajax_url, form, (data) => {
       window.location.href = "/";
+      console.log(recipe_obj.home_url);
     });
     console.log('fuckrun');
   });
