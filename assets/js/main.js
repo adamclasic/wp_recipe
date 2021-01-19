@@ -35,8 +35,11 @@
       confirm_pass:                       $("#register-form-repassword").val()
     };
     $.post(recipe_obj.ajax_url, form, (data) => {
-      window.location.href = recipe_obj.home_url;
-      // console.log(recipe_obj.home_url);
+      if (data.status == 2) {
+        
+        console.log(data.status);
+        window.location.href = recipe_obj.home_url;
+      }
     });
     console.log('fuckrun');
   });

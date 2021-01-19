@@ -29,7 +29,7 @@ function recipe_create_account()
   //   );
   //   $user = wp_signon( $creds, false );
   //   wp_redirect(home_url('/'));
-  //   wp_send_json($output);
+    wp_send_json($output);
   }
 
   $output = ['status' => 2];
