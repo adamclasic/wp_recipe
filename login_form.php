@@ -1,30 +1,34 @@
 <div class="col_one_third nobottommargin">
+  <?php echo OPN_REG ?>
+  <?php //if (OPN_REG) { ?>
+    
   <div class="well well-lg nobottommargin">
+
     <div id="login-status"></div>
     
-    <form id="login-form" class="nobottommargin">
-      STR_NONCE
+      <form id="login-form" class="nobottommargin">
+        STR_NONCE
 
-      <h3>Login to your Account</h3>
+        <h3>Login to your Account</h3>
 
-      <div class="col_full">
-        <label for="login-form-username">Username:</label>
-        <input type="text" id="login-form-username" class="form-control" />
-      </div>
+        <div class="col_full">
+          <label for="login-form-username">Username:</label>
+          <input type="text" id="login-form-username" class="form-control" />
+        </div>
 
-      <div class="col_full">
-        <label for="login-form-password">Password:</label>
-        <input type="password" id="login-form-password" class="form-control" />
-      </div>
+        <div class="col_full">
+          <label for="login-form-password">Password:</label>
+          <input type="password" id="login-form-password" class="form-control" />
+        </div>
 
-      <div class="col_full nobottommargin">
-        <input type="submit" class="button button-3d nomargin" id="login-form-submit">Login</input>
-      </div>
+        <div class="col_full nobottommargin">
+          <input type="submit" class="button button-3d nomargin" id="login-form-submit">Login</input>
+        </div>
 
-    </form>
+      </form>
+    </div>
+
   </div>
-
-</div>
 
 <div class="col_two_third col_last nobottommargin">
 
@@ -79,5 +83,5 @@
     </div>
 
   </form>
-
+<?php } ?>
 </div>
