@@ -41,6 +41,24 @@
         window.location.href = recipe_obj.home_url;
       }
     });
-    console.log('fuckrun');
+  });
+
+  // For Login Form.
+
+  $(document).on('submit', '#login-form', (e) => {
+    e.preventDefault();
+    var form                            =   {
+      _wpnonce:                           $('#_wpnonce').val(),
+      action:                             "recipe_login_account",
+      username:                           $("#login-form-username").val(),
+      password:                               $("#login-form-password").val(),
+    };
+    $.post(recipe_obj.ajax_url, form, (data) => {
+      if (data.status == 2) {
+        
+        console.log(data.status);
+        window.location.href = recipe_obj.home_url;
+      }
+    });
   });
 })(jQuery);

@@ -1,6 +1,6 @@
 <?php
 
-function recipe_create_account()
+function recipe_login_account()
 {
   $output = ['status' => 1];
 
@@ -14,6 +14,7 @@ function recipe_create_account()
   ]);
 
   if (is_wp_error($login_status)) {
+    // wp_send_json($login_status);
     wp_send_json($output);
   }
 
