@@ -1,5 +1,5 @@
-<div class="col_one_third nobottommargin">
-  <?php echo OPN_REG ?>
+<div class="col_one_third nobottommargin " >
+  <?php //echo OPN_REG ?>
   <?php //if (OPN_REG) { ?>
     
   <div class="well well-lg nobottommargin">
@@ -30,7 +30,7 @@
 
   </div>
 
-<div class="col_two_third col_last nobottommargin">
+<div class="col_two_third col_last nobottommargin" OPN_REG>
 
   <h3>Don't have an Account? Register Now.</h3>
 

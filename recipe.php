@@ -136,6 +136,6 @@ add_shortcode('login_form', function ()
   
   $form_data = file_get_contents("login_form.php", true);
   $form_data = str_replace('STR_NONCE', wp_nonce_field(), $form_data);
-  $form_data = str_replace('OPN_REG', get_option( 'users_can_register'), $form_data);
+  $form_data = str_replace('OPN_REG', (get_option( 'users_can_register') ? '' : 'style="display: none;"' ), $form_data);
   return $form_data;
 });
