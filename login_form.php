@@ -1,6 +1,4 @@
 <div class="col_one_third nobottommargin " >
-  <?php //echo OPN_REG ?>
-  <?php //if (OPN_REG) { ?>
     
   <div class="well well-lg nobottommargin">
 
@@ -83,5 +81,4 @@
     </div>
 
   </form>
-<?php } ?>
 </div>

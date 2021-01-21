@@ -109,6 +109,13 @@ add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 
 add_filter('the_content', 'filter_content');
 
+add_filter( 'wp_nav_menu_items', function ($items)
+{
+
+  $item = '<li>' . wp_loginout(home_url('/'), false) . '</li>';
+  return $items . $item;
+}, 999 );
+
 
 //shortcodes
 function mnrf()
