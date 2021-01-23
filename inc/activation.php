@@ -8,4 +8,7 @@ function r_activate()
   require( ABSPATH . "/wp-admin/includes/upgrade.php" );
   dbDelta( $createSQL );
   wp_schedule_event( time(), 'daily', 'my_daily_event' );
+
+  r_register_posttype();
+  flush_rewrite_rules();
 }

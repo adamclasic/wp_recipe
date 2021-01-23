@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin_Name
+ * recipe
  *
  * Fired when the plugin is uninstalled.
  *
@@ -15,10 +15,10 @@
  * - Repeat with other user roles. Best directly by using the links/query string parameters.
  * - Repeat things for multisite. Once for a single site in the network, once sitewide.
  *
- * @package   Plugin_Name
- * @author    {{author_name}} <{{author_email}}>
+ * @package   recipe
+ * @author    {{Adamclasic}} <{{author_email}}>
  * @copyright {{author_copyright}}
- * @license   {{author_license}}
+ * @license   {{MIT}}
  * @link      {{author_url}}
  */
 
@@ -88,7 +88,9 @@ function pn_uninstall() {
 	$GLOBALS['wpdb']->query("DROP TABLE `".$GLOBALS['wpdb']->prefix."TABLE_NAME`");
 	$GLOBALS['wpdb']->query("OPTIMIZE TABLE `" .$GLOBALS['wpdb']->prefix."options`");
 	 */
-
+		global $wpdb;
+	 $sql_query_remove = "DROP TABLE IF EXISTS `" . $wpdb->prefix . "_ratings`;";
+		$wpdb->query($sql_query_remove);
 	// Remove the capabilities of the plugin
 	if ( !isset( $wp_roles ) ) {
 		$wp_roles = new WP_Roles; // phpcs:ignore
