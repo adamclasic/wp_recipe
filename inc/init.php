@@ -14,9 +14,7 @@ function r_register_posttype() {
         'add_new_item'          => __( 'Add New Recipe', 'recipe' ),
         'new_item'              => __( 'New Recipe', 'recipe' ),
         'edit_item'             => __( 'Edit Recipe', 'recipe' ),
-        'view_item'             => __( 'V<?php 
-    
-        iew Recipe', 'recipe' ),
+        'view_item'             => __( 'View Recipe', 'recipe' ),
         'all_items'             => __( 'All Recipes', 'recipe' ),
         'search_items'          => __( 'Search Recipes', 'recipe' ),
         'parent_item_colon'     => __( 'Parent Recipes:', 'recipe' ),
