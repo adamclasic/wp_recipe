@@ -74,6 +74,7 @@ if ( version_compare( PHP_VERSION, '7.0.0', '<=' ) ) {
 
 //includes
 include( 'inc/admin/init.php' );
+include( 'inc/admin/menu_page.php' );
 
 include( 'inc/init.php' );
 include( 'inc/process/r_save_post.php' );
@@ -106,6 +107,7 @@ add_action( 'wp_ajax_nopriv_recipe_login_account', 'recipe_login_account' );
 add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 // add_action( 'widgets_init ', 'r_register_widgets');
 // add_action( 'my_daily_event ', 'r_my_daily_event');
+add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
 
 add_filter('the_content', 'filter_content');
 
