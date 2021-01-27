@@ -48,5 +48,9 @@ function r_register_posttype() {
     );
  
     register_post_type( 'recipe', $args );
+    
+
+
+
 }
  
