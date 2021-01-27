@@ -22,4 +22,22 @@ function r_enqueue()
 
   wp_enqueue_script( 'r_rateit' );
   wp_enqueue_script( 'r_main' );
+
+
 }
+function r_enqueue_script() {
+
+    wp_register_script( 
+        'r_admin_js', plugins_url( '/assets/js/main_admin.js', RECIPE_PLUGIN_URL )
+    );
+
+    wp_enqueue_script( 'r_admin_js' );
+
+
+    //Enqueue media.
+    wp_enqueue_media();
+    // Enqueue custom js file.
+    wp_register_script( 'r-admin-script', plugins_url( __FILE__ ), array('jquery') );
+    wp_enqueue_script( 'r-admin-script' );
+  }
+  add_action('admin_enqueue_scripts', 'r_enqueue_script');

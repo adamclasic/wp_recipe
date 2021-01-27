@@ -77,6 +77,11 @@ function myplugin_settings_page()
           submit_button();
 
           ?>
+          <form method="post">
+            <input id="wk-media-url" type="text" name="media" />
+            <input id="wk-button" type="button" class="button" value="Upload Image" />
+            <input type="submit" value="Submit" />
+        </form>
       </form>
   </div>
 

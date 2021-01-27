@@ -44,6 +44,7 @@ function r_register_posttype() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
+        'taxonomies'            =>  [ 'category', 'post_tag' ],
         'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     );
  
