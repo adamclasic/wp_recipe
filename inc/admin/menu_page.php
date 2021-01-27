@@ -50,5 +50,35 @@ function my_custom_menu_page(){
 
 function myplugin_settings_page()
 {
-  echo 'hi Im just a settings page nada mass';
+  
+  ?>
+ 
+  <div class="wrap">
+      <?php 
+       
+      // Uncomment if this screen isn't added with add_options_page() 
+      // settings_errors(); 
+       
+      ?>
+
+      <h2>My Plugin</h2>
+      <p>Some text describing what the plugin settings do.</p>
+
+      <form method="post" action="options.php">
+          <?php
+
+          // Output the settings sections.
+          do_settings_sections( 'myplugin_settings' );
+
+          // Output the hidden fields, nonce, etc.
+          settings_fields( 'myplugin_settings_group' );
+
+          // Submit button.
+          submit_button();
+
+          ?>
+      </form>
+  </div>
+
+  <?php
 }
