@@ -61,4 +61,28 @@
       }
     });
   });
+
+
+  $( '#form-add-recipe' ).on( 'submit', function(e) {
+    var request;
+    console.log('hi from front end recipe submit');
+    e.preventDefault();
+    var val_one = $( '#r_inputTitle-one' ).val();
+    var val_two = $( '#tinymce-two' ).val();
+
+    var formData = {
+        action: 'coolplugin_create_post',
+        title: val_one,
+        body: val_two,
+    };
+
+    request = $.ajax({
+        type: 'POST',
+        url: recipe_obj.ajax_url,
+        data: formData,
+    });
+});
+
+
+
 })(jQuery);

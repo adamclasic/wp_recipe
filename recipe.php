@@ -111,6 +111,30 @@ add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
 add_action( 'admin_init', 'r_admin_init' );
 
+add_action('wp_ajax_coolplugin_create_post', 'submit_recipe_frontend_create_post');
+
+function submit_recipe_frontend_create_post() {
+    $var1 = $_POST['title'];
+    $var2 = $_POST['body'];
+
+    $new_post = array(
+        'post_type'         => 'recipe',
+        'post_status'       => 'pending',
+        'post_title'        => $var1,
+        "post_content" => ' ',
+    );
+
+    $post_id = wp_insert_post( $new_post, $wp_error );
+
+    if ($post_id == false){
+        $post_url = get_permalink( $post_id );
+        echo $post_url;
+    }else {
+        // some sort of error
+    }
+    var_dump( 2 );
+}
+
 add_filter('the_content', 'filter_content');
 
 add_filter( 'wp_nav_menu_items', function ($items)
