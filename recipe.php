@@ -89,6 +89,7 @@ include( 'inc/r_block_enqueue.php' );
 include( dirname(RECIPE_PLUGIN_URL) . '\inc\widgets\recipe_of_day.php' );
 include( 'inc/r_register_widgets.php' );
 include( 'inc/admin/admin_init.php' );
+include( 'blocks/r_enqueue_block_editor_assets.php' );
 // include( 'inc/utilities/get_random_post_id.php' );
 // include( 'inc/r_my_daily_event.php' );
 
@@ -110,6 +111,19 @@ add_action( 'save_post_recipe', 'r_save_post', 10, 3 );
 // add_action( 'my_daily_event ', 'r_my_daily_event');
 add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
 add_action( 'admin_init', 'r_admin_init' );
+add_action( 'enqueue_block_editor_assets', 'r_enqueue_block_editor_assets' );
+ 
+add_action( 'admin_notices', 'sample_admin_notice__success' );
+
+function sample_admin_notice__success() {
+
+  ?>
+
+  <div class="notice notice-warning is-dismissible">
+      <p>You have more than 5 recipes waiting for review!</p>
+  </div>
+  <?php
+}
 
 add_action('wp_ajax_coolplugin_create_post', 'submit_recipe_frontend_create_post');
 
