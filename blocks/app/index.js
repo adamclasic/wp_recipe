@@ -1,1 +1,1 @@
-console.log('hello125');
+import './recipe_blocks'

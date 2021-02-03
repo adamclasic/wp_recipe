@@ -90,10 +90,22 @@
 /*!**********************!*\
   !*** ./app/index.js ***!
   \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _recipe_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./recipe_blocks */ \"./app/recipe_blocks/index.js\");\n/* harmony import */ var _recipe_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_recipe_blocks__WEBPACK_IMPORTED_MODULE_0__);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hcHAvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAvaW5kZXguanM/ZTkyNSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJy4vcmVjaXBlX2Jsb2Nrcyc7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7Iiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./app/index.js\n");
+
+/***/ }),
+
+/***/ "./app/recipe_blocks/index.js":
+/*!************************************!*\
+  !*** ./app/recipe_blocks/index.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('hello125');//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hcHAvaW5kZXguanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9hcHAvaW5kZXguanM/ZTkyNSJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zb2xlLmxvZygnaGVsbG8xMjUnKTsiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./app/index.js\n");
+eval("// Registering my block with a unique name\nvar registerBlockType = wp.blocks.registerBlockType;\nregisterBlockType('my-plugin/book', {\n  title: 'Book',\n  category: 'widgets',\n  icon: 'book-alt',\n  edit: function edit() {\n    return wp.element.createElement(\"p\", null, \"hi im edit\");\n  },\n  save: function save() {\n    return wp.element.createElement(\"p\", null, \"hi im save\");\n  },\n  support: {\n    html: false,\n    className: false\n  }\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hcHAvcmVjaXBlX2Jsb2Nrcy9pbmRleC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2FwcC9yZWNpcGVfYmxvY2tzL2luZGV4LmpzPzhlNmEiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gUmVnaXN0ZXJpbmcgbXkgYmxvY2sgd2l0aCBhIHVuaXF1ZSBuYW1lXG52YXIgcmVnaXN0ZXJCbG9ja1R5cGUgPSB3cC5ibG9ja3MucmVnaXN0ZXJCbG9ja1R5cGU7XG5yZWdpc3RlckJsb2NrVHlwZSgnbXktcGx1Z2luL2Jvb2snLCB7XG4gIHRpdGxlOiAnQm9vaycsXG4gIGNhdGVnb3J5OiAnd2lkZ2V0cycsXG4gIGljb246ICdib29rLWFsdCcsXG4gIGVkaXQ6IGZ1bmN0aW9uIGVkaXQoKSB7XG4gICAgcmV0dXJuIHdwLmVsZW1lbnQuY3JlYXRlRWxlbWVudChcInBcIiwgbnVsbCwgXCJoaSBpbSBlZGl0XCIpO1xuICB9LFxuICBzYXZlOiBmdW5jdGlvbiBzYXZlKCkge1xuICAgIHJldHVybiB3cC5lbGVtZW50LmNyZWF0ZUVsZW1lbnQoXCJwXCIsIG51bGwsIFwiaGkgaW0gc2F2ZVwiKTtcbiAgfSxcbiAgc3VwcG9ydDoge1xuICAgIGh0bWw6IGZhbHNlLFxuICAgIGNsYXNzTmFtZTogZmFsc2VcbiAgfVxufSk7Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./app/recipe_blocks/index.js\n");
 
 /***/ })
 
