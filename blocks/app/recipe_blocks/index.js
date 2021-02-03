@@ -1,8 +1,27 @@
 // Registering my block with a unique name
+
+
 const { registerBlockType } = wp.blocks
 
-const { PanelBody, PanelRow, TextControl } = wp.components;
+const { PanelBody, PanelRow, TextControl, SelectControl } = wp.components;
+const { withState } = wp.compose;
 const { InspectorControls } = wp.editor;
+
+const MySelectControl = withState( {
+    size: '50%',
+} )( ( { size, setState } ) => (
+    <SelectControl
+        label="Size"
+        value={ size }
+        options={ [
+            { label: 'Big', value: '100%' },
+            { label: 'Medium', value: '50%' },
+            { label: 'Small', value: '25%' },
+        ] }
+        onChange={ ( size ) => { setState( { size } ) } }
+    />
+) );
+
 registerBlockType( 'reccpe/ings', {
   title: 'Ings',
   category: 'widgets',
@@ -22,6 +41,7 @@ registerBlockType( 'reccpe/ings', {
               console.log(newVal)
             }}
           ></TextControl>
+          <MySelectControl />
         </PanelBody>
 
       </InspectorControls>,
