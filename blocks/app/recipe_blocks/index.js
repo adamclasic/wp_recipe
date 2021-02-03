@@ -1,15 +1,38 @@
 // Registering my block with a unique name
-
 const { registerBlockType } = wp.blocks
-registerBlockType( 'my-plugin/book', {
-  title: 'Book',
+
+const { PanelBody, PanelRow, TextControl } = wp.components;
+const { InspectorControls } = wp.editor;
+registerBlockType( 'reccpe/ings', {
+  title: 'Ings',
   category: 'widgets',
   icon: 'book-alt',
-  edit: () => {
-    return <p>hi im edit</p>
+  edit: ( props ) => {
+    return [
+      <InspectorControls>
+
+        <PanelBody title={ 'Recipe' }>
+          <PanelRow>
+            <p>give a title to the recipe.</p>
+          </PanelRow>
+          <TextControl 
+            value='test'
+            help='ex: French Fris'
+            onChange= {(newVal) => {
+              console.log(newVal)
+            }}
+          ></TextControl>
+        </PanelBody>
+
+      </InspectorControls>,
+    <div>
+      <p>name: </p>
+      <p>dificulty: </p>
+    </div>
+    ]
   },
   
-  save: () => {
+  save: ( props ) => {
     return <p>hi im save</p>
   },
   support: {
