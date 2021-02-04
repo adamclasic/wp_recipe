@@ -26,6 +26,12 @@ registerBlockType( 'reccpe/ings', {
   title: 'Ings',
   category: 'widgets',
   icon: 'book-alt',
+  attributes: {
+    name: {
+            source: 'text',
+            // default: 'my dog'
+          },
+  },
   edit: ( props ) => {
     return [
       <InspectorControls>
@@ -35,10 +41,10 @@ registerBlockType( 'reccpe/ings', {
             <p>give a title to the recipe.</p>
           </PanelRow>
           <TextControl 
-            value='test'
+            value= {props.attributes.name}
             help='ex: French Fris'
             onChange= {(newVal) => {
-              console.log(newVal)
+              props.setAttributes({name: newVal})
             }}
           ></TextControl>
           <MySelectControl />
@@ -46,7 +52,7 @@ registerBlockType( 'reccpe/ings', {
 
       </InspectorControls>,
     <div>
-      <p>name: </p>
+      <p>name: {props.attributes.name}</p>
       <p>dificulty: </p>
     </div>
     ]
